@@ -1,6 +1,7 @@
-package com.github.fatimascarneiro.ayudame.vitrine;
+package com.github.fatimascarneiro.ayudame.vitrine.prestadordeservico;
 
-import javax.validation.constraints.NotNull;
+import com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico.CategoriaDeServicos;
+import com.github.fatimascarneiro.ayudame.vitrine.localidade.Localidade;
 
 public class PrestadorDeServico {
 
@@ -10,13 +11,13 @@ public class PrestadorDeServico {
 
     private CategoriaDeServicos categoriaDeServicos;
 
-    private Regiao regiao;
+    private Localidade localidade;
 
 
-    public PrestadorDeServico(String nome, CategoriaDeServicos categoriaDeServicos, Regiao regiao) {
+    public PrestadorDeServico(String nome, CategoriaDeServicos categoriaDeServicos, Localidade localidade) {
         this.nome = nome;
         this.categoriaDeServicos = categoriaDeServicos;
-        this.regiao = regiao;
+        this.localidade = localidade;
     }
 
     public int getId() {
@@ -43,11 +44,11 @@ public class PrestadorDeServico {
         this.categoriaDeServicos = categoriaDeServicos;
     }
 
-    public Regiao getRegiao() {
-        return regiao;
+    public Localidade getLocalidade() {
+        return localidade;
     }
 
-    public void setRegiao(Regiao regiao) {
-        this.regiao = regiao;
+    public void setLocalidade(Localidade localidade) {
+        this.localidade = localidade;
     }
 }

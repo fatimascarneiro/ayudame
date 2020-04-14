@@ -1,6 +1,8 @@
 package com.github.fatimascarneiro.ayudame.vitrine;
 
-import com.github.fatimascarneiro.ayudame.VitrineDeServicosDao;
+import com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico.CategoriaDeServicos;
+import com.github.fatimascarneiro.ayudame.vitrine.localidade.Localidade;
+import com.github.fatimascarneiro.ayudame.vitrine.prestadordeservico.PrestadorDeServico;
 
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class VitrineDeServicosService {
 
     private List<CategoriaDeServicos> categoriasDeServicos;
 
-    private List<Regiao> regioes;
+    private List<Localidade> localidades;
 
     private List<PrestadorDeServico> prestadoresDeServico;
 
@@ -22,14 +24,6 @@ public class VitrineDeServicosService {
         this.categoriasDeServicos = categoriasDeServicos;
     }
 
-    public List<Regiao> getRegioes() {
-        return regioes;
-    }
-
-    public void setRegioes(List<Regiao> regioes) {
-        this.regioes = regioes;
-    }
-
     public List<PrestadorDeServico> getPrestadoresDeServico() {
         return prestadoresDeServico;
     }
@@ -38,15 +32,15 @@ public class VitrineDeServicosService {
         this.prestadoresDeServico = prestadoresDeServico;
     }
 
-    private List<PrestadorDeServico> listarPrestadoresPorCategoriasDeServicos(CategoriaDeServicos categoriaDeServicos) {
-        return dao.listarPrestadorDeServicoPelaCategoriaDeServico(categoriaDeServicos);
+    public List<Localidade> getLocalidades() {
+        return localidades;
     }
 
-    private List<PrestadorDeServico> listarPrestadoresPorNome(String nome) {
+    public void setLocalidades(List<Localidade> localidades) {
+        this.localidades = localidades;
+    }
+
+    public List<PrestadorDeServico> listarPrestadoresPorNome(String nome) {
         return dao.listarPrestadorDeServicoPorNome(nome);
-    }
-
-    private List<PrestadorDeServico> listarPrestadoresPorRegiao(Regiao regiao) {
-        return dao.listarPrestadorDeServicoPorRegiao(regiao);
     }
 }
