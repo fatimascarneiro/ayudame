@@ -1,16 +1,23 @@
 package com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class CategoriaDeServicosService {
 
     private String nome;
 
     private String descricao;
 
-    private CategoriaDeServicosForm form;
+    private final CategoriaDeServicosDao dao;
 
-    private CategoriaDeServicosDao dao;
+    @Autowired
+    public CategoriaDeServicosService(CategoriaDeServicosDao dao) {
+        this.dao = dao;
+    }
 
     public String getNome() {
         return (nome != null) ? nome : "";

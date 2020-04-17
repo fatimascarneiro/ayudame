@@ -4,7 +4,7 @@ public class CategoriaDeServicosForm {
 
     private String nome;
 
-    private String descricção;
+    private String descricao;
 
     public String getNome() {
         return nome;
@@ -14,11 +14,11 @@ public class CategoriaDeServicosForm {
         this.nome = nome;
     }
 
-    public String getDescricção() {
-        return descricção;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescricção(String descricção) {
-        this.descricção = descricção;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }

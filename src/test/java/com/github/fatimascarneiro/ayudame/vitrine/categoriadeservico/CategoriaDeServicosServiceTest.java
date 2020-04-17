@@ -6,9 +6,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
-
-import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CategoriaDeServicosServiceTest {
@@ -31,8 +30,21 @@ public class CategoriaDeServicosServiceTest {
         deveRetornarUmaCategoriaDeServico();
     }
 
+    @Test
+    public void cadastrarCategoriaDeServicoCorreta() {
+        dadoUmNome();
+        dadoUmaDescricao();
+        quandoCadastrarUmaCategoriaDeServico();
+        deveRetornarUmaCategoriaDeServicoConformeOCadastro();
+    }
+
+    private void deveRetornarUmaCategoriaDeServicoConformeOCadastro() {
+        when(dao.cadastraCategoriaDeServico(nome, descricao)).thenReturn(new CategoriaDeServicos(nome, descricao));
+        assertEquals("ALIMENTAÇÃO", service.cadastraCategoriaDeServico(nome, descricao).getNome());
+    }
+
     private void deveRetornarUmaCategoriaDeServico() {
-        when(dao.cadastraCategoriaDeServico(nome, descricao)).thenReturn(new CategoriaDeServicos());
+        when(dao.cadastraCategoriaDeServico(service.getNome(), service.getDescricao())).thenReturn(new CategoriaDeServicos(nome, descricao));
     }
 
     private void quandoCadastrarUmaCategoriaDeServico() {
@@ -46,6 +58,4 @@ public class CategoriaDeServicosServiceTest {
     private void dadoUmNome() {
         nome = "ALIMENTAÇÃO";
     }
-
-
 }
