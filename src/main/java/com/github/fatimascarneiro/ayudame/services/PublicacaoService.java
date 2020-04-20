@@ -1,5 +1,9 @@
-package com.github.fatimascarneiro.ayudame.vitrine.publicacao;
+package com.github.fatimascarneiro.ayudame.services;
 
+import com.github.fatimascarneiro.ayudame.forms.PublicacaoForm;
+import com.github.fatimascarneiro.ayudame.views.PublicacaoView;
+import com.github.fatimascarneiro.ayudame.vitrine.publicacao.Publicacao;
+import com.github.fatimascarneiro.ayudame.dao.PublicacaoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +28,7 @@ public class PublicacaoService {
     }
 
     public String getNomeEmpresa() {
-        return nomeEmpresa;
+        return (nomeEmpresa != null) ? nomeEmpresa : "";
     }
 
     public void setNomeEmpresa(String nomeEmpresa) {
@@ -32,7 +36,7 @@ public class PublicacaoService {
     }
 
     public String getDescricao() {
-        return descricao;
+        return (descricao != null ) ? descricao : "";
     }
 
     public void setDescricao(String descricao) {
@@ -40,7 +44,7 @@ public class PublicacaoService {
     }
 
     public String getTelefone() {
-        return telefone;
+        return (telefone != null) ? telefone : "";
     }
 
     public void setTelefone(String telefone) {
@@ -48,15 +52,15 @@ public class PublicacaoService {
     }
 
     public String getEndereco() {
-        return endereco;
+        return (endereco != null) ? endereco : "";
     }
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
-    public Publicacao adicionarPublicacao(String nomeEmpresa, String telefone, String endereco, String descricao) {
-        return dao.adicionarPublicacao(nomeEmpresa, telefone, endereco, descricao);
+    public PublicacaoView adicionarPublicacao(PublicacaoForm form) {
+        return dao.adicionarPublicacao(form);
     }
 
     public List<Publicacao> listarPublicacoes() {

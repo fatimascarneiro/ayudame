@@ -1,4 +1,4 @@
-package com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico;
+package com.github.fatimascarneiro.ayudame.forms;
 
 public class CategoriaDeServicosForm {
 

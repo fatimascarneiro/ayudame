@@ -1,4 +1,4 @@
-package com.github.fatimascarneiro.ayudame.vitrine;
+package com.github.fatimascarneiro.ayudame.dao;
 
 import com.github.fatimascarneiro.ayudame.vitrine.publicacao.Publicacao;
 

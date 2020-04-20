@@ -1,4 +1,4 @@
-package com.github.fatimascarneiro.ayudame.vitrine.publicacao;
+package com.github.fatimascarneiro.ayudame.forms;
 
 public class PublicacaoForm {
 

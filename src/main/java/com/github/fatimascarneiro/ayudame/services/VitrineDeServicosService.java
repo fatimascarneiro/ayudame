@@ -1,5 +1,6 @@
-package com.github.fatimascarneiro.ayudame.vitrine;
+package com.github.fatimascarneiro.ayudame.services;
 
+import com.github.fatimascarneiro.ayudame.dao.VitrineDeServicosDao;
 import com.github.fatimascarneiro.ayudame.vitrine.publicacao.Publicacao;
 
 import java.util.List;

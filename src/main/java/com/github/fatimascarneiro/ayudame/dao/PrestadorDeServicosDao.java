@@ -1,4 +1,4 @@
-package com.github.fatimascarneiro.ayudame.vitrine.prestadordeservico;
+package com.github.fatimascarneiro.ayudame.dao;
 
 import com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico.CategoriaDeServicos;
 

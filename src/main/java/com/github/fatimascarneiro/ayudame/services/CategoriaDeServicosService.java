@@ -1,5 +1,7 @@
-package com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico;
+package com.github.fatimascarneiro.ayudame.services;
 
+import com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico.CategoriaDeServicos;
+import com.github.fatimascarneiro.ayudame.dao.CategoriaDeServicosDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

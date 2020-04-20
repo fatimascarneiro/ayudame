@@ -1,5 +1,7 @@
 package com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico;
 
+import com.github.fatimascarneiro.ayudame.dao.CategoriaDeServicosDao;
+import com.github.fatimascarneiro.ayudame.services.CategoriaDeServicosService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

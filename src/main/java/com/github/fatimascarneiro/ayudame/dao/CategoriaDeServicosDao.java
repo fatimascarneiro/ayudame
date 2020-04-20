@@ -1,5 +1,6 @@
-package com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico;
+package com.github.fatimascarneiro.ayudame.dao;
 
+import com.github.fatimascarneiro.ayudame.vitrine.categoriadeservico.CategoriaDeServicos;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
