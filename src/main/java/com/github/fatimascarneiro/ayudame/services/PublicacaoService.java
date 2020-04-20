@@ -28,7 +28,7 @@ public class PublicacaoService {
     }
 
     public String getNomeEmpresa() {
-        return (nomeEmpresa != null) ? nomeEmpresa : "";
+        return nomeEmpresa;
     }
 
     public void setNomeEmpresa(String nomeEmpresa) {
@@ -36,7 +36,7 @@ public class PublicacaoService {
     }
 
     public String getDescricao() {
-        return (descricao != null ) ? descricao : "";
+        return descricao;
     }
 
     public void setDescricao(String descricao) {
@@ -44,7 +44,7 @@ public class PublicacaoService {
     }
 
     public String getTelefone() {
-        return (telefone != null) ? telefone : "";
+        return telefone;
     }
 
     public void setTelefone(String telefone) {
@@ -52,7 +52,7 @@ public class PublicacaoService {
     }
 
     public String getEndereco() {
-        return (endereco != null) ? endereco : "";
+        return endereco;
     }
 
     public void setEndereco(String endereco) {
