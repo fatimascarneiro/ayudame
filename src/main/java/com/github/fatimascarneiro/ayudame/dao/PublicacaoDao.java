@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+//@Repository
 public class PublicacaoDao {
 
 //TODO FICARÁ ASSIM ATÉ EU IMPLEMENTAR O BANCO DE DADOS
